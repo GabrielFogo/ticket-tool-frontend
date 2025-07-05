@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend        # nome do container no pod
-        image: seu_usuario_dockerhub/ticket-tool-frontend:latest  # imagem docker usada
+        image: gabrielfogo/ticket-tool-frontend:latest  # imagem docker usada
         ports:
           - containerPort: 3000   # porta interna do container onde a app frontend escuta
         env:
