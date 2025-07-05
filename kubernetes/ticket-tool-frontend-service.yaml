@@ -1,12 +1,12 @@
-apiVersion: v1               # especifica a versao da api para o recurso service
-kind: Service                # define que este recurso eh um service
+apiVersion: v1                # especifica a versao da api para o recurso service
+kind: Service                 # define que este recurso eh um service
 metadata:
   name: ticket-tool-frontend-service  # nome do service do frontend
 spec:
   selector:
-    app: ticket-tool-frontend   # seleciona os pods com o label app=ticket-tool-frontend
+    app: ticket-tool-frontend  # seleciona os pods com o label app=ticket-tool-frontend
   ports:
-    - port: 80                # porta do service dentro do cluster exposta para o frontend
-      targetPort: 3000    
-      nodePort: 30080    
-  type: NodePort
+    - port: 80                 # porta do service dentro do cluster exposta para o frontend
+      targetPort: 3000         # porta no container onde o frontend escuta
+      nodePort: 30080          # porta exposta no no do kubernetes para acesso externo
+  type: NodePort              # tipo do service que expoe a porta no host via nodeport
