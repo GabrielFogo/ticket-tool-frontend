@@ -16,5 +16,7 @@ COPY . .
 # build da aplicação Vite
 RUN yarn build
 
+EXPOSE 3000
+
 # inicia a aplicação
 CMD ["yarn", "start"]
