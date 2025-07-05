@@ -9,4 +9,4 @@ spec:
     - port: 80                # porta do service dentro do cluster exposta para o frontend
       targetPort: 3000    
       nodePort: 30080    
-  type: ClusterIP  
+  type: NodePort
